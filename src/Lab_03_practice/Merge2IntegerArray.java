@@ -28,12 +28,8 @@ public class Merge2IntegerArray {
         }
 
         //Merge second array to new array
-        for (int mergeElementIndex = firstArray.length; mergeElementIndex < mergeArray.length; ) {
-            for (int secondElementIndex = 0; secondElementIndex < secondArray.length; secondElementIndex++) {
-                mergeArray[mergeElementIndex] = secondArray[secondElementIndex];
-                ++mergeElementIndex;
-            }
-            break;
+        for (int secondElementIndex = 0, elementIndex = firstArray.length; secondElementIndex < secondArray.length; secondElementIndex++, elementIndex++) {
+            mergeArray[elementIndex] = secondArray[secondElementIndex];
         }
 
         System.out.print("Merged array: ");
