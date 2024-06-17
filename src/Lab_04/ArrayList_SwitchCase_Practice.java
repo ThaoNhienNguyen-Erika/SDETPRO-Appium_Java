@@ -70,7 +70,9 @@ public class ArrayList_SwitchCase_Practice {
                             if (integerList.get(index) == numberNeedFinding) {
                                 indexNeedFinding = index;
                                 System.out.println("Index of the number: " + indexNeedFinding);
-                            } else {
+                                break;
+                            }
+                            if (index == integerList.size()-1 && integerList.get(index) != numberNeedFinding){
                                 System.out.println("The number does not exist in the Array List.");
                             }
                         }

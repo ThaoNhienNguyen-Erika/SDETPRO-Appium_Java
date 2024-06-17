@@ -1,10 +1,17 @@
 package Lab_07;
 
-public class FindBook_OOP_DAO {
+public class Book {
     private String ISBN;
     private String title;
     private String authorName;
     private int year;
+
+    public Book(String ISBN, String title, String authorName, int year) {
+        this.ISBN = ISBN;
+        this.title = title;
+        this.authorName = authorName;
+        this.year = year;
+    }
 
     public String getISBN() {
         return ISBN;
@@ -38,18 +45,9 @@ public class FindBook_OOP_DAO {
         this.year = year;
     }
 
-    public FindBook_OOP_DAO(){}
-
-    public FindBook_OOP_DAO(String ISBN, String title, String authorName, int year) {
-        this.ISBN = ISBN;
-        this.title = title;
-        this.authorName = authorName;
-        this.year = year;
-    }
-
     @Override
     public String toString() {
-        return "FindBook_OOP{" +
+        return "Book{" +
                 "ISBN='" + ISBN + '\'' +
                 ", title='" + title + '\'' +
                 ", authorName='" + authorName + '\'' +
